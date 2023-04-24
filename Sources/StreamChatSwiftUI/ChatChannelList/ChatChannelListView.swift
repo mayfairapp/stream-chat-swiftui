@@ -68,8 +68,7 @@ public struct ChatChannelListView<Factory: ViewFactory>: View {
                     : nil
             )
             .onReceive(viewModel.$hideTabBar) { newValue in
-                if isIphone && handleTabBarVisibility {
-                    self.setupTabBarAppeareance()
+                if handleTabBarVisibility {
                     self.tabBar?.isHidden = newValue
                 }
             }
