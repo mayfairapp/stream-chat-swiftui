@@ -58,7 +58,7 @@ public struct ChatChannelListView<Factory: ViewFactory>: View {
                 view.navigationViewStyle(.stack)
             })
             .background(
-                isIphone && handleTabBarVisibility ?
+                handleTabBarVisibility ?
                     Color.clear.background(
                         TabBarAccessor { tabBar in
                             self.tabBar = tabBar
